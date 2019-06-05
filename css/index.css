@@ -250,10 +250,15 @@ html {
   font-weight: bold;
 }
 .container main .about-me {
-  width: 45%;
+  width: 80%;
+}
+.container main .work-history {
+  width: 100%;
 }
 .container main .contact {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .container main .contact .contact-form {
   width: 60%;
