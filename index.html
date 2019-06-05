@@ -1,19 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>My Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <div class="bg"></div>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Profile</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="introduction">
+          <div class="introduction-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+              alt="Two guys sitting next to each other while working on their computer"
+            />
+          </div>
+          <div class="introduction-description">
+            <div class="introduction-headline">
+              <h1>
+                John Smith <br />
+                - Web Dev -
+              </h1>
+              <p>Helping you create beautiful and unique web experiences.</p>
+            </div>
+            <hr />
+            <div class="induction-sub-headline">
+              <p>
+                I am a freelancing web developer. If you're interested in
+                working with me, feel free to contact me!
+              </p>
+              <button>Take the first step!</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-me">
+          <h2>Let me Introduce Myself:</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id voluptas
+            consectetur amet vero cupiditate, nemo vitae dicta dolorum rerum
+            velit, repellendus neque animi nesciunt a, molestiae pariatur iure
+            sapiente libero! Eaque placeat voluptatum natus, quae quos
+            accusantium at?
+          </p>
+        </section>
+
+        <section class="skills">
+          <h2>My skills:</h2>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>Adobe XD</li>
+            <li>Git</li>
+            <li>LESS/SASS</li>
+            <li>Photoshop</li>
+          </ul>
+        </section>
+
+        <section class="work-history">
+          <h2>Work History:</h2>
+          <table>
+            <tr>
+              <th>Years</th>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Tech Used</th>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>Lambda School</td>
+              <td>Student</td>
+              <td>HTML, CSS, Javascript</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td>Google</td>
+              <td>Software Engineer</td>
+              <td>C++, C#</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td>Amazon</td>
+              <td>Senior Software Engineer</td>
+              <td>C++, Python</td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td>JSmith Tech</td>
+              <td>CEO</td>
+              <td>C++</td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="contact">
+          <div class="contact-form">
+            <form action="#">
+              <fieldset>
+                <legend>Contact Form:</legend>
+                <label for="name">
+                  Name:
+                  <input type="text" name="name" id="name" />
+                </label>
+                <label for="email">
+                  E-mail:
+                  <input type="email" name="email" id="email" />
+                </label>
+                <label for="message">
+                  Leave a message:
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </label>
+              </fieldset>
+            </form>
+          </div>
+          <div class="contact-information">
+            <h2>Contact Information:</h2>
+            <address>
+              <p>John Smith</p>
+              <p>1-(111)-1111</p>
+              <p>
+                1234 Street <br />
+                City, State 12345
+              </p>
+            </address>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2019 John Smith</p>
+      </footer>
+    </div>
+  </body>
 </html>
