@@ -294,9 +294,6 @@ html {
 
     .about-me {
       width: 80%;
-
-      p {
-      }
     }
 
     .skills {
@@ -304,6 +301,30 @@ html {
 
     .work-history {
       width: 100%;
+
+      table {
+        width: 100%;
+
+        border-collapse: collapse;
+
+        tr {
+          text-align: left;
+
+          th,
+          td {
+            border: 1px solid @default-color;
+            padding: 0.8rem;
+          }
+
+          th {
+            font-weight: bold;
+          }
+
+          &:nth-child(even) {
+            background-color: @third-color;
+          }
+        }
+      }
     }
 
     .contact {

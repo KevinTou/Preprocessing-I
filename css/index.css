@@ -255,6 +255,24 @@ html {
 .container main .work-history {
   width: 100%;
 }
+.container main .work-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.container main .work-history table tr {
+  text-align: left;
+}
+.container main .work-history table tr th,
+.container main .work-history table tr td {
+  border: 1px solid #111111;
+  padding: 0.8rem;
+}
+.container main .work-history table tr th {
+  font-weight: bold;
+}
+.container main .work-history table tr:nth-child(even) {
+  background-color: #6aa8cc;
+}
 .container main .contact {
   display: flex;
   width: 100%;
