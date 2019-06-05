@@ -4,56 +4,346 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+// Enter code here
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+// Color Variables
+@default-color: #111111;
+@primary-color: #85d3ff;
+@second-color: #d1eeff;
+@third-color: #6aa8cc;
+@fourth-color: #697780;
+@fifth-color: #426980;
+
+// Font Variables
+@font-xlarge: 5em;
+@font-large: 3em;
+@font-medium: 2em;
+@font-small: 1.4em;
+
+// Margin Variables
+@center: 0 auto;
+
+// Padding Variables
+
+// Mixins
+.padding {
+  padding: 5em;
+}
+
+.flex-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Media Query
+
+// * {
+//   outline: 1px solid red;
+// }
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bg {
+  background-color: @second-color;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1000px;
+  margin: @center;
+
+  h1 {
+    font-size: @font-large;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  header {
+    padding: 2em 0;
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+      margin: @center;
+
+      a {
+        color: @default-color;
+        text-decoration: none;
+        font-size: @font-medium;
+        font-weight: bold;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+          border-bottom: 2px solid @default-color;
+        }
+      }
+    }
+  }
+
+  main {
+    background-color: @primary-color;
+    width: 100%;
+    padding: 3em;
+    font-size: @font-medium;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    .introduction {
+      display: flex;
+      justify-content: space-between;
+      background-color: @fifth-color;
+      padding: 1.5em;
+
+      .introduction-image-container {
+        width: 50%;
+        margin: auto 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .introduction-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 45%;
+
+        .introduction-headline {
+          .flex-center-column();
+
+          p {
+            font-size: 0.8em;
+            width: 80%;
+            padding-bottom: 1em;
+          }
+
+          button {
+            border: 3px solid @default-color;
+            padding: 0.5em 5em;
+            background-color: @fourth-color;
+            color: @default-color;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .about-me {
+      width: 45%;
+
+      p {
+      }
+    }
+
+    .skills {
+      // width: 20%;
+    }
+
+    .work-history {
+    }
+
+    .contact {
+      display: flex;
+
+      .contact-form {
+        width: 60%;
+
+        fieldset {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid black;
+
+          legend {
+            font-weight: bold;
+          }
+
+          button {
+            border: 3px solid @default-color;
+            padding: 0.5em 5em;
+            background-color: @fourth-color;
+            color: @default-color;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .contact-information {
+        // width: 25%;
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 2em 0;
+
+    p {
+      font-size: @font-small;
+    }
+  }
+}
