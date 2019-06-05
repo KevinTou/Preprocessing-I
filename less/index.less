@@ -166,10 +166,9 @@ body {
   padding: 5em;
 }
 
-.flex-center-row {
+.flex-between {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .flex-center-column {
@@ -222,6 +221,10 @@ html {
       width: 60%;
       margin: @center;
 
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+
       a {
         color: @default-color;
         text-decoration: none;
@@ -241,23 +244,29 @@ html {
     width: 100%;
     padding: 3em;
     font-size: @font-medium;
-    display: flex;
+    .flex-between();
     flex-wrap: wrap;
-    justify-content: space-between;
 
     section {
       margin-bottom: 2em;
     }
 
     .introduction {
-      display: flex;
-      justify-content: space-between;
+      .flex-between();
       background-color: @fifth-color;
       padding: 1.5em;
+
+      @media (max-width: 500px) {
+        flex-direction: column;
+      }
 
       .introduction-image-container {
         width: 50%;
         margin: auto 0;
+
+        @media (max-width: 500px) {
+          width: 100%;
+        }
 
         img {
           width: 100%;
@@ -271,6 +280,13 @@ html {
         align-items: center;
         width: 45%;
 
+        @media (max-width: 500px) {
+          width: 100%;
+          text-align: center;
+          font-size: 1.7rem;
+          margin-top: 1.5rem;
+        }
+
         .introduction-headline {
           .flex-center-column();
 
@@ -278,6 +294,9 @@ html {
             font-size: 0.8em;
             width: 80%;
             padding-bottom: 1em;
+
+            @media (max-width: 500px) {
+            }
           }
 
           button {
@@ -287,6 +306,11 @@ html {
             color: @default-color;
             font-family: "Montserrat", sans-serif;
             font-weight: bold;
+
+            &:hover {
+              border: 3px solid white;
+              color: white;
+            }
           }
         }
       }
@@ -294,9 +318,17 @@ html {
 
     .about-me {
       width: 80%;
+
+      @media (max-width: 500px) {
+        margin: 0 auto;
+      }
     }
 
     .skills {
+      @media (max-width: 500px) {
+        width: 100%;
+        margin: 1.5em 0 1.5em 1.5em;
+      }
     }
 
     .work-history {
@@ -304,7 +336,6 @@ html {
 
       table {
         width: 100%;
-
         border-collapse: collapse;
 
         tr {
@@ -328,34 +359,19 @@ html {
     }
 
     .contact {
-      display: flex;
       width: 100%;
-      justify-content: space-between;
+      .flex-between();
 
-      .contact-form {
-        width: 60%;
-
-        fieldset {
-          display: flex;
-          flex-direction: column;
-          border: 1px solid black;
-
-          legend {
-            font-weight: bold;
-          }
-
-          button {
-            border: 3px solid @default-color;
-            padding: 0.5em 5em;
-            background-color: @fourth-color;
-            color: @default-color;
-            font-family: "Montserrat", sans-serif;
-            font-weight: bold;
-          }
-        }
+      @media (max-width: 500px) {
+        margin-left: 1.5em;
       }
 
       .contact-information {
+        address {
+          .phone {
+            margin: 1em 0;
+          }
+        }
       }
     }
   }

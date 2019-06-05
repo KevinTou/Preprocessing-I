@@ -144,10 +144,9 @@ body {
 .padding {
   padding: 5em;
 }
-.flex-center-row {
+.flex-between {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 .flex-center-column {
   display: flex;
@@ -188,6 +187,11 @@ html {
   width: 60%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container header nav {
+    width: 100%;
+  }
+}
 .container header nav a {
   color: #111111;
   text-decoration: none;
@@ -204,8 +208,8 @@ html {
   padding: 3em;
   font-size: 2em;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .container main section {
   margin-bottom: 2em;
@@ -216,9 +220,19 @@ html {
   background-color: #426980;
   padding: 1.5em;
 }
+@media (max-width: 500px) {
+  .container main .introduction {
+    flex-direction: column;
+  }
+}
 .container main .introduction .introduction-image-container {
   width: 50%;
   margin: auto 0;
+}
+@media (max-width: 500px) {
+  .container main .introduction .introduction-image-container {
+    width: 100%;
+  }
 }
 .container main .introduction .introduction-image-container img {
   width: 100%;
@@ -229,6 +243,14 @@ html {
   justify-content: space-around;
   align-items: center;
   width: 45%;
+}
+@media (max-width: 500px) {
+  .container main .introduction .introduction-description {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+  }
 }
 .container main .introduction .introduction-description .introduction-headline {
   display: flex;
@@ -249,8 +271,23 @@ html {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
+.container main .introduction .introduction-description .introduction-headline button:hover {
+  border: 3px solid white;
+  color: white;
+}
 .container main .about-me {
   width: 80%;
+}
+@media (max-width: 500px) {
+  .container main .about-me {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .container main .skills {
+    width: 100%;
+    margin: 1.5em 0 1.5em 1.5em;
+  }
 }
 .container main .work-history {
   width: 100%;
@@ -274,28 +311,17 @@ html {
   background-color: #6aa8cc;
 }
 .container main .contact {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-between;
 }
-.container main .contact .contact-form {
-  width: 60%;
+@media (max-width: 500px) {
+  .container main .contact {
+    margin-left: 1.5em;
+  }
 }
-.container main .contact .contact-form fieldset {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-}
-.container main .contact .contact-form fieldset legend {
-  font-weight: bold;
-}
-.container main .contact .contact-form fieldset button {
-  border: 3px solid #111111;
-  padding: 0.5em 5em;
-  background-color: #697780;
-  color: #111111;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+.container main .contact .contact-information address .phone {
+  margin: 1em 0;
 }
 .container footer {
   text-align: center;
